@@ -1,0 +1,187 @@
+[gd_scene format=3 uid="uid://dj3gkqs7bidww"]
+
+[ext_resource type="Texture2D" uid="uid://ck1g4yc516l2i" path="res://Texturas/Tiles107_1K-JPG/Tiles107_1K-JPG_Color.jpg" id="1_ly0wt"]
+[ext_resource type="Texture2D" uid="uid://cedg0a7lbw5i7" path="res://Texturas/Tiles107_1K-JPG/Tiles107_1K-JPG_NormalDX.jpg" id="2_rxj15"]
+[ext_resource type="Texture2D" uid="uid://bxwrvpx0mv2tp" path="res://Texturas/Tiles107_1K-JPG/Tiles107_1K-JPG_NormalGL.jpg" id="3_f4s1m"]
+[ext_resource type="Script" uid="uid://c4snrffmvh7lw" path="res://Escenas/agua.gd" id="4_gv8d2"]
+[ext_resource type="PackedScene" uid="uid://ddvecey5dbxdj" path="res://Modelos/Personajes/jugador.tscn" id="5_rxj15"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_tokhs"]
+albedo_texture = ExtResource("1_ly0wt")
+roughness_texture = ExtResource("3_f4s1m")
+normal_enabled = true
+normal_scale = 1.5
+normal_texture = ExtResource("2_rxj15")
+uv1_scale = Vector3(3, 3, 3)
+uv1_triplanar = true
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_awk8m"]
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_0dyk3"]
+noise = SubResource("FastNoiseLite_awk8m")
+seamless = true
+in_3d_space = true
+as_normal_map = true
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_oeajq"]
+transparency = 1
+depth_draw_mode = 1
+albedo_color = Color(0, 0, 0, 0.3137255)
+metallic = 0.13
+roughness = 0.3
+normal_enabled = true
+normal_texture = SubResource("NoiseTexture2D_0dyk3")
+proximity_fade_enabled = true
+proximity_fade_distance = 0.3
+
+[node name="Mundo" type="Node3D" unique_id=451270964]
+
+[node name="PP" type="Node3D" parent="." unique_id=143410255]
+
+[node name="SueloBase" type="CSGBox3D" parent="PP" unique_id=1724248781]
+transform = Transform3D(12, 0, 0, 0, 2, 0, 0, 0, 30, 0, 0, 0)
+material_override = SubResource("StandardMaterial3D_tokhs")
+use_collision = true
+
+[node name="SueloBase4" type="CSGBox3D" parent="PP" unique_id=1383598005]
+transform = Transform3D(12, 0, 0, 0, 2, 0, 0, 0, 30, 0, -1.9272796, 30.013786)
+material_override = SubResource("StandardMaterial3D_tokhs")
+use_collision = true
+
+[node name="SueloBase2" type="CSGBox3D" parent="PP" unique_id=32348674]
+transform = Transform3D(12, 0, 0, 0, 2, 0, 0, 0, 30, 0, 5, 0)
+material_override = SubResource("StandardMaterial3D_tokhs")
+use_collision = true
+
+[node name="SueloBase3" type="CSGBox3D" parent="PP" unique_id=2069395515]
+transform = Transform3D(12, 0, 0, 0, 2, 0, 0, 0, 30, 0, 5, 29.998373)
+material_override = SubResource("StandardMaterial3D_tokhs")
+use_collision = true
+
+[node name="SueloBase5" type="CSGBox3D" parent="PP" unique_id=1831180333]
+transform = Transform3D(5.136778, 0, 0, 0, 10, 0, 0, 0, 0.5620755, -3.2909608, 0.9749546, 45.028137)
+material_override = SubResource("StandardMaterial3D_tokhs")
+use_collision = true
+
+[node name="SueloBase7" type="CSGBox3D" parent="PP" unique_id=366959899]
+transform = Transform3D(4.8579006, 0, 0, 0, 10, 0, 0, 0, 0.5620755, 3.6059172, 0.9749546, 45.028137)
+material_override = SubResource("StandardMaterial3D_tokhs")
+use_collision = true
+
+[node name="SueloBase8" type="CSGBox3D" parent="PP" unique_id=742689044]
+transform = Transform3D(1.904526, 0, 0, 0, 16.93145, 0, 0, 0, 0.5620755, 0.23203337, -1.444958, 45.028137)
+material_override = SubResource("StandardMaterial3D_tokhs")
+use_collision = true
+size = Vector3(1, 0.3164673, 1)
+
+[node name="SueloBase9" type="CSGBox3D" parent="PP" unique_id=62375242]
+transform = Transform3D(1.904526, 0, 0, 0, 5.2805624, 0, 0, 0, 0.5620755, 0.23203337, 4.30408, 45.028137)
+material_override = SubResource("StandardMaterial3D_tokhs")
+use_collision = true
+size = Vector3(1, 0.3164673, 1)
+
+[node name="SueloBase6" type="CSGBox3D" parent="PP" unique_id=1754907166]
+transform = Transform3D(11.999826, 0.053591672, -0.0005405629, -0.06430409, 9.999853, 0.0009124384, 0.0065452578, -0.009095323, 0.99999946, 0, 0.9749546, -15.125778)
+material_override = SubResource("StandardMaterial3D_tokhs")
+use_collision = true
+
+[node name="Agua" type="CSGBox3D" parent="PP" unique_id=971113667]
+transform = Transform3D(12, 0, 0, 0, 2, 0, 0, 0, 30, 0, 0, 29.983)
+material_override = SubResource("StandardMaterial3D_oeajq")
+script = ExtResource("4_gv8d2")
+
+[node name="ParedIZquierda" type="CSGBox3D" parent="PP" unique_id=1383162671]
+transform = Transform3D(0.2, 0, 0, 0, 5, 0, 0, 0, 30, 5.922496, 3.5095859, 0)
+material_override = SubResource("StandardMaterial3D_tokhs")
+use_collision = true
+
+[node name="ParedIZquierda2" type="CSGBox3D" parent="PP" unique_id=854441595]
+transform = Transform3D(0.2, 0, 0, 0, 5, 0, 0, 0, 30, 5.922496, 3.5095859, 29.896395)
+material_override = SubResource("StandardMaterial3D_tokhs")
+use_collision = true
+
+[node name="ParedIZquierda3" type="CSGBox3D" parent="PP" unique_id=2089190013]
+transform = Transform3D(0.2, 0, 0, 0, 5, 0, 0, 0, 30, 5.922496, -1.4767823, 29.896395)
+material_override = SubResource("StandardMaterial3D_tokhs")
+
+[node name="ParedIZDerecha" type="CSGBox3D" parent="PP" unique_id=737019626]
+transform = Transform3D(0.2, 0, 0, 0, 5, 0, 0, 0, 30, -5.833189, 3.5095859, 0)
+material_override = SubResource("StandardMaterial3D_tokhs")
+use_collision = true
+
+[node name="ParedIZDerecha2" type="CSGBox3D" parent="PP" unique_id=1923714033]
+transform = Transform3D(0.2, 0, 0, 0, 5, 0, 0, 0, 30, -5.833189, 3.5095859, 29.948547)
+material_override = SubResource("StandardMaterial3D_tokhs")
+use_collision = true
+
+[node name="ParedIZDerecha3" type="CSGBox3D" parent="PP" unique_id=1261903571]
+transform = Transform3D(0.2, 0, 0, 0, 5, 0, 0, 0, 30, -5.833189, 1.4725714, 29.948547)
+material_override = SubResource("StandardMaterial3D_tokhs")
+use_collision = true
+
+[node name="Jugador" parent="PP" unique_id=2129807334 instance=ExtResource("5_rxj15")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.030930638, 2, -10.831053)
+
+[node name="PisosPeque" type="Node3D" parent="PP" unique_id=410463584]
+
+[node name="BasePeque" type="CSGBox3D" parent="PP/PisosPeque" unique_id=784999623]
+transform = Transform3D(10.195457, 0, 0, 0, 2, 0, 0, 0, 7.969343, 0.12839973, 0, 19.411789)
+material_override = SubResource("StandardMaterial3D_tokhs")
+use_collision = true
+size = Vector3(0.31298828, 1, 0.3779297)
+
+[node name="BasePeque2" type="CSGBox3D" parent="PP/PisosPeque" unique_id=1037810370]
+transform = Transform3D(10.195457, 0, 0, 0, 2, 0, 0, 0, 7.969343, 0.12839973, 0, 25.237738)
+material_override = SubResource("StandardMaterial3D_tokhs")
+use_collision = true
+size = Vector3(0.31298828, 1, 0.3779297)
+
+[node name="BasePeque3" type="CSGBox3D" parent="PP/PisosPeque" unique_id=2101187366]
+transform = Transform3D(10.195457, 0, 0, 0, 2, 0, 0, 0, 7.969343, 0.12839973, 0, 30.703701)
+material_override = SubResource("StandardMaterial3D_tokhs")
+use_collision = true
+size = Vector3(0.31298828, 1, 0.3779297)
+
+[node name="BasePeque4" type="CSGBox3D" parent="PP/PisosPeque" unique_id=1209119955]
+transform = Transform3D(10.195457, 0, 0, 0, 2, 0, 0, 0, 7.969343, 0.12839973, 0, 37.501495)
+material_override = SubResource("StandardMaterial3D_tokhs")
+use_collision = true
+size = Vector3(0.31298828, 1, 0.3779297)
+
+[node name="BasePeque5" type="CSGBox3D" parent="PP/PisosPeque" unique_id=1276137116]
+transform = Transform3D(10.195457, 0, 0, 0, 2, 0, 0, 0, 7.969343, 0.12839973, 0, 42.429977)
+material_override = SubResource("StandardMaterial3D_tokhs")
+use_collision = true
+size = Vector3(0.31298828, 1, 0.3779297)
+
+[node name="focos" type="Node3D" parent="." unique_id=1469542814]
+
+[node name="foco1" type="OmniLight3D" parent="focos" unique_id=1490924221]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.8280954, -6.2109213)
+light_color = Color(0.96862745, 1, 0.72156864, 1)
+light_energy = 0.1
+shadow_enabled = true
+omni_range = 10.58
+
+[node name="foco2" type="OmniLight3D" parent="focos" unique_id=451686177]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.828, 10)
+light_color = Color(0.96862745, 1, 0.72156864, 1)
+light_energy = 0.1
+shadow_enabled = true
+omni_range = 10.58
+
+[node name="foco3" type="OmniLight3D" parent="focos" unique_id=378692541]
+transform = Transform3D(0.9997295, -0.016905362, 0.01597206, 0.016249126, 0.9990531, 0.040359367, -0.016639229, -0.040088918, 0.99905753, 0, 3.828, 26)
+light_color = Color(0.8358459, 0.87883353, 0.00011666894, 1)
+light_energy = 0.1
+light_specular = 0.119
+shadow_enabled = true
+omni_range = 10.58
+
+[node name="foco4" type="OmniLight3D" parent="focos" unique_id=1064689466]
+transform = Transform3D(0.9997295, -0.016905362, 0.015972063, 0.016249126, 0.9990531, 0.040359363, -0.016639229, -0.040088918, 0.9990576, 0, 3.828, 39.180244)
+light_color = Color(0.8358459, 0.87883353, 0.00011666894, 1)
+light_energy = 0.1
+light_specular = 0.119
+shadow_enabled = true
+omni_range = 10.58

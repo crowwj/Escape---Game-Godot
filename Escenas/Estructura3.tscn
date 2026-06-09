@@ -1,0 +1,346 @@
+[gd_scene format=3 uid="uid://c5wc5xa4vumbs"]
+
+[ext_resource type="Texture2D" uid="uid://ck1g4yc516l2i" path="res://Texturas/Tiles107_1K-JPG/Tiles107_1K-JPG_Color.jpg" id="1_ety07"]
+[ext_resource type="Texture2D" uid="uid://cedg0a7lbw5i7" path="res://Texturas/Tiles107_1K-JPG/Tiles107_1K-JPG_NormalDX.jpg" id="2_4irk4"]
+[ext_resource type="Texture2D" uid="uid://bxwrvpx0mv2tp" path="res://Texturas/Tiles107_1K-JPG/Tiles107_1K-JPG_NormalGL.jpg" id="3_endkr"]
+[ext_resource type="Script" uid="uid://c4snrffmvh7lw" path="res://Escenas/agua.gd" id="4_djfvt"]
+[ext_resource type="PackedScene" uid="uid://dl7d1nkn4fiss" path="res://Iluminacion/iluminacion.tscn" id="5_seal1"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_berak"]
+albedo_texture = ExtResource("1_ety07")
+roughness_texture = ExtResource("3_endkr")
+normal_enabled = true
+normal_scale = 1.5
+normal_texture = ExtResource("2_4irk4")
+uv1_scale = Vector3(3, 3, 3)
+uv1_triplanar = true
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ety07"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0pibc"]
+albedo_texture = ExtResource("1_ety07")
+roughness_texture = ExtResource("3_endkr")
+normal_enabled = true
+normal_scale = 1.5
+normal_texture = ExtResource("2_4irk4")
+uv1_scale = Vector3(3, 3, 3)
+uv1_triplanar = true
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_5tqh0"]
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_0dyk3"]
+noise = SubResource("FastNoiseLite_5tqh0")
+seamless = true
+in_3d_space = true
+as_normal_map = true
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wecfd"]
+transparency = 1
+depth_draw_mode = 1
+albedo_color = Color(0, 0, 0, 0.3137255)
+metallic = 0.13
+roughness = 0.3
+normal_enabled = true
+normal_texture = SubResource("NoiseTexture2D_0dyk3")
+proximity_fade_enabled = true
+proximity_fade_distance = 0.3
+
+[node name="Node3D" type="Node3D" unique_id=1980060188]
+
+[node name="PisoYparedes" type="Node3D" parent="." unique_id=323987725]
+
+[node name="Piso" type="Node3D" parent="PisoYparedes" unique_id=1889695556]
+
+[node name="SueloBase3" type="CSGBox3D" parent="PisoYparedes/Piso" unique_id=1047286426]
+transform = Transform3D(12, 0, 0, 0, 2, 0, 0, 0, 30, 5.626465, 16.008152, -129.46289)
+material_override = SubResource("StandardMaterial3D_berak")
+use_collision = true
+size = Vector3(0.5891113, 26.628784, 9.630859)
+
+[node name="SueloBase10" type="CSGBox3D" parent="PisoYparedes/Piso" unique_id=592012486]
+transform = Transform3D(12, 0, 0, 0, 2, 0, 0, 0, 30, 8.777204, 41.58595, -129.46289)
+material_override = SubResource("StandardMaterial3D_ety07")
+use_collision = true
+size = Vector3(0.12512207, 0.6684265, 9.630859)
+
+[node name="SueloBase4" type="CSGBox3D" parent="PisoYparedes/Piso" unique_id=647554720]
+transform = Transform3D(12, 0, 0, 0, 2, 0, 0, 0, 30, -0.4099264, 63.371193, -129.46289)
+material_override = SubResource("StandardMaterial3D_berak")
+use_collision = true
+size = Vector3(0.44128418, 23.992191, 9.630859)
+
+[node name="PuertaResta2" type="CSGBox3D" parent="PisoYparedes/Piso/SueloBase4" unique_id=1335790663]
+transform = Transform3D(1.5720943, 0, 4.7369517e-15, 0, 0.35697705, 0, -3.848776e-16, 0, 0.0037640464, -0.025607605, -6.796482, -4.5474234)
+material_override = SubResource("StandardMaterial3D_0pibc")
+operation = 2
+use_collision = true
+size = Vector3(0.32687378, 20.339111, 83.28125)
+
+[node name="PuertaResta3" type="CSGBox3D" parent="PisoYparedes/Piso/SueloBase4" unique_id=279457015]
+transform = Transform3D(1.5720943, 0, 4.7369517e-15, 0, 0.35697705, 0, -3.848776e-16, 0, 0.0037640464, -0.025607605, -6.796482, 4.528463)
+material_override = SubResource("StandardMaterial3D_0pibc")
+operation = 2
+use_collision = true
+size = Vector3(0.32687378, 20.339111, 83.28125)
+
+[node name="SueloBase8" type="CSGBox3D" parent="PisoYparedes/Piso" unique_id=83743204]
+transform = Transform3D(-5.2453663e-07, -2, 0, 12, -8.742278e-08, 0, 0, 0, 30, 108.48688, 86.72797, -128.50891)
+material_override = SubResource("StandardMaterial3D_berak")
+use_collision = true
+size = Vector3(0.44128418, 107.248535, 9.694458)
+
+[node name="SueloBase7" type="CSGBox3D" parent="PisoYparedes/Piso" unique_id=821532230]
+transform = Transform3D(12, 0, 0, 0, 2, 0, 0, 0, 30, 212.28033, 37.276955, -129.90234)
+material_override = SubResource("StandardMaterial3D_berak")
+use_collision = true
+size = Vector3(0.9838257, 50.086426, 9.9375)
+
+[node name="PuertaResta2" type="CSGBox3D" parent="PisoYparedes/Piso/SueloBase7" unique_id=364614295]
+transform = Transform3D(0.13100788, 0, 3.9474602e-16, 0, 0.17848852, 0, -1.282926e-17, 0, 0.00012546821, 0.036346436, -0.5471935, 4.4683185)
+material_override = SubResource("StandardMaterial3D_0pibc")
+operation = 2
+use_collision = true
+size = Vector3(9.686895, 73.4668, 4279.9004)
+
+[node name="PuertaResta3" type="CSGBox3D" parent="PisoYparedes/Piso/SueloBase7" unique_id=1312835350]
+transform = Transform3D(0.13100788, 0, 3.9474602e-16, 0, 0.17848852, 0, -1.282926e-17, 0, 0.00012546821, 0.036346436, -0.5471935, 3.5982273)
+material_override = SubResource("StandardMaterial3D_0pibc")
+operation = 2
+use_collision = true
+size = Vector3(9.686895, 73.4668, 4279.9004)
+
+[node name="PuertaResta4" type="CSGBox3D" parent="PisoYparedes/Piso/SueloBase7" unique_id=575163470]
+transform = Transform3D(0.13100788, 0, 3.9474602e-16, 0, 0.17848852, 0, -1.282926e-17, 0, 0.00012546821, 0.036346436, -0.5471935, 2.7461553)
+material_override = SubResource("StandardMaterial3D_0pibc")
+operation = 2
+use_collision = true
+size = Vector3(9.686895, 73.4668, 4279.9004)
+
+[node name="PuertaResta5" type="CSGBox3D" parent="PisoYparedes/Piso/SueloBase7" unique_id=1822574159]
+transform = Transform3D(0.13100788, 0, 3.9474602e-16, 0, 0.17848852, 0, -1.282926e-17, 0, 0.00012546821, 0.036346436, -0.5471935, 1.9038637)
+material_override = SubResource("StandardMaterial3D_0pibc")
+operation = 2
+use_collision = true
+size = Vector3(9.686895, 73.4668, 4279.9004)
+
+[node name="PuertaResta6" type="CSGBox3D" parent="PisoYparedes/Piso/SueloBase7" unique_id=1434503019]
+transform = Transform3D(0.13100788, 0, 3.9474602e-16, 0, 0.17848852, 0, -1.282926e-17, 0, 0.00012546821, 0.036346436, -0.5471935, 1.0517366)
+material_override = SubResource("StandardMaterial3D_0pibc")
+operation = 2
+use_collision = true
+size = Vector3(9.686895, 73.4668, 4279.9004)
+
+[node name="PuertaResta7" type="CSGBox3D" parent="PisoYparedes/Piso/SueloBase7" unique_id=789100895]
+transform = Transform3D(0.13100788, 0, 3.9474602e-16, 0, 0.17848852, 0, -1.282926e-17, 0, 0.00012546821, 0.036346436, -0.5471935, 0.1467824)
+material_override = SubResource("StandardMaterial3D_0pibc")
+operation = 2
+use_collision = true
+size = Vector3(9.686895, 73.4668, 4279.9004)
+
+[node name="PuertaResta8" type="CSGBox3D" parent="PisoYparedes/Piso/SueloBase7" unique_id=2104959974]
+transform = Transform3D(0.13100788, 0, 3.9474602e-16, 0, 0.17848852, 0, -1.282926e-17, 0, 0.00012546821, 0.036346436, -0.5471935, -0.71133375)
+material_override = SubResource("StandardMaterial3D_0pibc")
+operation = 2
+use_collision = true
+size = Vector3(9.686895, 73.4668, 4279.9004)
+
+[node name="PuertaResta9" type="CSGBox3D" parent="PisoYparedes/Piso/SueloBase7" unique_id=166634672]
+transform = Transform3D(0.13100788, 0, 3.9474602e-16, 0, 0.17848852, 0, -1.282926e-17, 0, 0.00012546821, 0.036346436, -0.5471935, -1.5446672)
+material_override = SubResource("StandardMaterial3D_0pibc")
+operation = 2
+use_collision = true
+size = Vector3(9.686895, 73.4668, 4279.9004)
+
+[node name="PuertaResta10" type="CSGBox3D" parent="PisoYparedes/Piso/SueloBase7" unique_id=609557630]
+transform = Transform3D(0.13100788, 0, 3.9474602e-16, 0, 0.17848852, 0, -1.282926e-17, 0, 0.00012546821, 0.036346436, -0.5471935, -2.3799534)
+material_override = SubResource("StandardMaterial3D_0pibc")
+operation = 2
+use_collision = true
+size = Vector3(9.686895, 73.4668, 4279.9004)
+
+[node name="PuertaResta11" type="CSGBox3D" parent="PisoYparedes/Piso/SueloBase7" unique_id=550476518]
+transform = Transform3D(0.13100788, 0, 3.9474602e-16, 0, 0.17848852, 0, -1.282926e-17, 0, 0.00012546821, 0.036346436, -0.5471935, -3.2317739)
+material_override = SubResource("StandardMaterial3D_0pibc")
+operation = 2
+use_collision = true
+size = Vector3(9.686895, 73.4668, 4279.9004)
+
+[node name="PuertaResta12" type="CSGBox3D" parent="PisoYparedes/Piso/SueloBase7" unique_id=1176261398]
+transform = Transform3D(0.13100788, 0, 3.9474602e-16, 0, 0.17848852, 0, -1.282926e-17, 0, 0.00012546821, 0.036346436, -0.5471935, -4.111534)
+material_override = SubResource("StandardMaterial3D_0pibc")
+operation = 2
+use_collision = true
+size = Vector3(9.686895, 73.4668, 4279.9004)
+
+[node name="PuertaResta13" type="CSGBox3D" parent="PisoYparedes/Piso/SueloBase7" unique_id=1988386222]
+transform = Transform3D(0.13100788, 0, 3.9474602e-16, 0, 0.17848852, 0, -1.282926e-17, 0, 0.00012546821, 0.036346436, 15.001804, -4.111534)
+material_override = SubResource("StandardMaterial3D_0pibc")
+operation = 2
+use_collision = true
+size = Vector3(9.686895, 73.4668, 4279.9004)
+
+[node name="PuertaResta14" type="CSGBox3D" parent="PisoYparedes/Piso/SueloBase7" unique_id=417873783]
+transform = Transform3D(0.13100788, 0, 3.9474602e-16, 0, 0.17848852, 0, -1.282926e-17, 0, 0.00012546821, 0.036346436, 15.001804, -3.2198334)
+material_override = SubResource("StandardMaterial3D_0pibc")
+operation = 2
+use_collision = true
+size = Vector3(9.686895, 73.4668, 4279.9004)
+
+[node name="PuertaResta15" type="CSGBox3D" parent="PisoYparedes/Piso/SueloBase7" unique_id=1969125397]
+transform = Transform3D(0.13100788, 0, 3.9474602e-16, 0, 0.17848852, 0, -1.282926e-17, 0, 0.00012546821, 0.036346436, 15.001804, -2.3680196)
+material_override = SubResource("StandardMaterial3D_0pibc")
+operation = 2
+use_collision = true
+size = Vector3(9.686895, 73.4668, 4279.9004)
+
+[node name="PuertaResta16" type="CSGBox3D" parent="PisoYparedes/Piso/SueloBase7" unique_id=721490675]
+transform = Transform3D(0.13100788, 0, 3.9474602e-16, 0, 0.17848852, 0, -1.282926e-17, 0, 0.00012546821, 0.036346436, 15.001804, -1.5328631)
+material_override = SubResource("StandardMaterial3D_0pibc")
+operation = 2
+use_collision = true
+size = Vector3(9.686895, 73.4668, 4279.9004)
+
+[node name="PuertaResta17" type="CSGBox3D" parent="PisoYparedes/Piso/SueloBase7" unique_id=807640066]
+transform = Transform3D(0.13100788, 0, 3.9474602e-16, 0, 0.17848852, 0, -1.282926e-17, 0, 0.00012546821, 0.036346436, 15.001804, -0.7005687)
+material_override = SubResource("StandardMaterial3D_0pibc")
+operation = 2
+use_collision = true
+size = Vector3(9.686895, 73.4668, 4279.9004)
+
+[node name="PuertaResta18" type="CSGBox3D" parent="PisoYparedes/Piso/SueloBase7" unique_id=2145478465]
+transform = Transform3D(0.13100788, 0, 3.9474602e-16, 0, 0.17848852, 0, -1.282926e-17, 0, 0.00012546821, 0.036346436, 15.001804, 0.14063215)
+material_override = SubResource("StandardMaterial3D_0pibc")
+operation = 2
+use_collision = true
+size = Vector3(9.686895, 73.4668, 4279.9004)
+
+[node name="PuertaResta19" type="CSGBox3D" parent="PisoYparedes/Piso/SueloBase7" unique_id=82079420]
+transform = Transform3D(0.13100788, 0, 3.9474602e-16, 0, 0.17848852, 0, -1.282926e-17, 0, 0.00012546821, 0.036346436, 15.001804, 1.0699856)
+material_override = SubResource("StandardMaterial3D_0pibc")
+operation = 2
+use_collision = true
+size = Vector3(9.686895, 73.4668, 4279.9004)
+
+[node name="PuertaResta20" type="CSGBox3D" parent="PisoYparedes/Piso/SueloBase7" unique_id=422005869]
+transform = Transform3D(0.13100788, 0, 3.9474602e-16, 0, 0.17848852, 0, -1.282926e-17, 0, 0.00012546821, 0.036346436, 15.001804, 1.9124479)
+material_override = SubResource("StandardMaterial3D_0pibc")
+operation = 2
+use_collision = true
+size = Vector3(9.686895, 73.4668, 4279.9004)
+
+[node name="PuertaResta21" type="CSGBox3D" parent="PisoYparedes/Piso/SueloBase7" unique_id=657868491]
+transform = Transform3D(0.13100788, 0, 3.9474602e-16, 0, 0.17848852, 0, -1.282926e-17, 0, 0.00012546821, 0.036346436, 15.001804, 2.7531662)
+material_override = SubResource("StandardMaterial3D_0pibc")
+operation = 2
+use_collision = true
+size = Vector3(9.686895, 73.4668, 4279.9004)
+
+[node name="PuertaResta22" type="CSGBox3D" parent="PisoYparedes/Piso/SueloBase7" unique_id=210975491]
+transform = Transform3D(0.13100788, 0, 3.9474602e-16, 0, 0.17848852, 0, -1.282926e-17, 0, 0.00012546821, 0.036346436, 15.001804, 3.596949)
+material_override = SubResource("StandardMaterial3D_0pibc")
+operation = 2
+use_collision = true
+size = Vector3(9.686895, 73.4668, 4279.9004)
+
+[node name="PuertaResta23" type="CSGBox3D" parent="PisoYparedes/Piso/SueloBase7" unique_id=1009518411]
+transform = Transform3D(0.13100788, 0, 3.9474602e-16, 0, 0.17848852, 0, -1.282926e-17, 0, 0.00012546821, 0.036346436, 15.001804, 4.484026)
+material_override = SubResource("StandardMaterial3D_0pibc")
+operation = 2
+use_collision = true
+size = Vector3(9.686895, 73.4668, 4279.9004)
+
+[node name="SueloBase5" type="CSGBox3D" parent="PisoYparedes/Piso" unique_id=279702529]
+transform = Transform3D(12, 0, 0, 0, 2, 0, 0, 0, 30, 103.21916, 38.386578, 16.823875)
+material_override = SubResource("StandardMaterial3D_berak")
+use_collision = true
+size = Vector3(17.7128, 48.976807, 0.13781738)
+
+[node name="SueloBase9" type="CSGBox3D" parent="PisoYparedes/Piso" unique_id=1833196832]
+transform = Transform3D(12, 0, 0, 0, 2, 0, 0, 0, 30, 103.21916, -9.076435, -131.32538)
+material_override = SubResource("StandardMaterial3D_berak")
+use_collision = true
+size = Vector3(17.7128, 1.513794, 9.836441)
+
+[node name="SueloBase6" type="CSGBox3D" parent="PisoYparedes/Piso" unique_id=605523925]
+transform = Transform3D(12, 0, 0, 0, 2, 0, 0, 0, 30, 103.21916, 38.386578, -275.911)
+material_override = SubResource("StandardMaterial3D_berak")
+use_collision = true
+size = Vector3(17.7128, 48.976807, 0.13781738)
+
+[node name="Paredes" type="Node3D" parent="PisoYparedes" unique_id=428149763]
+
+[node name="Agua" type="Node3D" parent="." unique_id=1133377988]
+
+[node name="Agua2" type="CSGBox3D" parent="." unique_id=297968727]
+transform = Transform3D(12, 0, 0, 0, 2, 0, 0, 0, 30, 106.36103, -5.4957485, -129.985)
+material_override = SubResource("StandardMaterial3D_wecfd")
+size = Vector3(16.750488, 6.026428, 9.682129)
+script = ExtResource("4_djfvt")
+
+[node name="Iluminacion" parent="." unique_id=509156330 instance=ExtResource("5_seal1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 100.56231, 130.48999, -33.23878)
+
+[node name="Node3D" type="Node3D" parent="." unique_id=75881112]
+
+[node name="foco4" type="OmniLight3D" parent="Node3D" unique_id=1790448589]
+transform = Transform3D(0.9997295, -0.016905362, 0.015972063, 0.016249126, 0.9990531, 0.040359363, -0.016639229, -0.040088918, 0.9990576, 31.077358, 47.988663, -6.395958)
+light_energy = 4.475
+light_specular = 0.119
+shadow_enabled = true
+omni_range = 5000.0
+
+[node name="foco5" type="OmniLight3D" parent="Node3D" unique_id=431970418]
+transform = Transform3D(0.9997295, -0.016905362, 0.015972063, 0.016249126, 0.9990531, 0.040359363, -0.016639229, -0.040088918, 0.9990576, 31.077358, 47.988663, -51.781353)
+light_energy = 4.475
+light_specular = 0.119
+shadow_enabled = true
+omni_range = 5000.0
+
+[node name="foco6" type="OmniLight3D" parent="Node3D" unique_id=1888103134]
+transform = Transform3D(0.9997295, -0.016905362, 0.015972063, 0.016249126, 0.9990531, 0.040359363, -0.016639229, -0.040088918, 0.9990576, 31.077358, 47.988663, -85.61778)
+light_energy = 4.475
+light_specular = 0.119
+shadow_enabled = true
+omni_range = 5000.0
+
+[node name="foco7" type="OmniLight3D" parent="Node3D" unique_id=253737640]
+transform = Transform3D(0.9997295, -0.016905362, 0.015972063, 0.016249126, 0.9990531, 0.040359363, -0.016639229, -0.040088918, 0.9990576, 31.077358, 47.988663, -124.631165)
+light_energy = 4.475
+light_specular = 0.119
+shadow_enabled = true
+omni_range = 5000.0
+
+[node name="foco8" type="OmniLight3D" parent="Node3D" unique_id=707345512]
+transform = Transform3D(0.9997295, -0.016905362, 0.015972063, 0.016249126, 0.9990531, 0.040359363, -0.016639229, -0.040088918, 0.9990576, 31.077358, 47.988663, -185.24979)
+light_energy = 4.475
+light_specular = 0.119
+shadow_enabled = true
+omni_range = 5000.0
+
+[node name="foco9" type="OmniLight3D" parent="Node3D" unique_id=653914130]
+transform = Transform3D(0.9997295, -0.016905362, 0.015972063, 0.016249126, 0.9990531, 0.040359363, -0.016639229, -0.040088918, 0.9990576, 76.8911, 47.988663, -185.24979)
+light_energy = 4.475
+light_specular = 0.119
+shadow_enabled = true
+omni_range = 5000.0
+
+[node name="foco10" type="OmniLight3D" parent="Node3D" unique_id=2130614958]
+transform = Transform3D(0.9997295, -0.016905362, 0.015972063, 0.016249126, 0.9990531, 0.040359363, -0.016639229, -0.040088918, 0.9990576, 76.8911, 47.988663, -111.69156)
+light_energy = 4.475
+light_specular = 0.119
+shadow_enabled = true
+omni_range = 5000.0
+
+[node name="foco11" type="OmniLight3D" parent="Node3D" unique_id=1078584164]
+transform = Transform3D(0.9997295, -0.016905362, 0.015972063, 0.016249126, 0.9990531, 0.040359363, -0.016639229, -0.040088918, 0.9990576, 76.8911, 47.988663, -67.91123)
+light_energy = 4.475
+light_specular = 0.119
+shadow_enabled = true
+omni_range = 5000.0
+
+[node name="foco12" type="OmniLight3D" parent="Node3D" unique_id=1890047708]
+transform = Transform3D(0.9997295, -0.016905362, 0.015972063, 0.016249126, 0.9990531, 0.040359363, -0.016639229, -0.040088918, 0.9990576, 76.8911, 47.988663, -21.348969)
+light_energy = 4.475
+light_specular = 0.119
+shadow_enabled = true
+omni_range = 5000.0

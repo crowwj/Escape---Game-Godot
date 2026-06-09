@@ -1,0 +1,140 @@
+[gd_scene format=3 uid="uid://dbewchc2q52ql"]
+
+[ext_resource type="Texture2D" uid="uid://ck1g4yc516l2i" path="res://Texturas/Tiles107_1K-JPG/Tiles107_1K-JPG_Color.jpg" id="1_7ghox"]
+[ext_resource type="Texture2D" uid="uid://cedg0a7lbw5i7" path="res://Texturas/Tiles107_1K-JPG/Tiles107_1K-JPG_NormalDX.jpg" id="2_o5e0d"]
+[ext_resource type="Texture2D" uid="uid://bxwrvpx0mv2tp" path="res://Texturas/Tiles107_1K-JPG/Tiles107_1K-JPG_NormalGL.jpg" id="3_rkajs"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7v64f"]
+albedo_texture = ExtResource("1_7ghox")
+roughness_texture = ExtResource("3_rkajs")
+normal_enabled = true
+normal_scale = 1.5
+normal_texture = ExtResource("2_o5e0d")
+uv1_scale = Vector3(3, 3, 3)
+uv1_triplanar = true
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_mojbe"]
+albedo_texture = ExtResource("1_7ghox")
+normal_enabled = true
+normal_scale = 1.5
+normal_texture = ExtResource("3_rkajs")
+
+[node name="Estructura4" type="Node3D" unique_id=1847440144]
+
+[node name="ParedPiso" type="Node3D" parent="." unique_id=2000869222]
+
+[node name="SueloBase11" type="CSGBox3D" parent="ParedPiso" unique_id=1938199414]
+transform = Transform3D(12, 0, 0, 0, 2, 0, 0, 0, 30, -0.028770447, -0.14446065, -43.825493)
+material_override = SubResource("StandardMaterial3D_7v64f")
+use_collision = true
+size = Vector3(0.7235451, 0.15422896, 3.2830887)
+
+[node name="SueloBase17" type="CSGBox3D" parent="ParedPiso" unique_id=1239270762]
+transform = Transform3D(12, 0, 0, 0, 2, 0, 0, 0, 30, -6.6847334, 8.744637, -43.825493)
+material_override = SubResource("StandardMaterial3D_7v64f")
+use_collision = true
+size = Vector3(0.37723637, 9.043326, 3.2830887)
+
+[node name="SueloBase13" type="CSGBox3D" parent="ParedPiso" unique_id=33648133]
+transform = Transform3D(12, 0, 0, 0, 2, 0, 0, 0, 30, 9.129198, -0.14446065, -84.560555)
+material_override = SubResource("StandardMaterial3D_7v64f")
+use_collision = true
+size = Vector3(0.8235254, 0.15422896, 0.2993021)
+
+[node name="SueloBase14" type="CSGBox3D" parent="ParedPiso" unique_id=415493302]
+transform = Transform3D(12, 0, 0, 0, 2, 0, 0, 0, 30, 9.129198, -0.14446065, -59.43165)
+material_override = SubResource("StandardMaterial3D_7v64f")
+use_collision = true
+size = Vector3(0.8235254, 0.15422896, 0.2993021)
+
+[node name="SueloBase15" type="CSGBox3D" parent="ParedPiso" unique_id=1449062745]
+transform = Transform3D(12, 0, 0, 0, 2, 0, 0, 0, 30, 9.129198, -0.14446065, -35.429573)
+material_override = SubResource("StandardMaterial3D_7v64f")
+use_collision = true
+size = Vector3(0.8235254, 0.15422896, 0.2993021)
+
+[node name="SueloBase16" type="CSGBox3D" parent="ParedPiso" unique_id=538618602]
+transform = Transform3D(12, 0, 0, 0, 2, 0, 0, 0, 30, 9.129198, -0.14446065, -11.335894)
+material_override = SubResource("StandardMaterial3D_7v64f")
+use_collision = true
+size = Vector3(0.8235254, 0.15422896, 0.2993021)
+
+[node name="SueloBase12" type="CSGBox3D" parent="ParedPiso" unique_id=557620419]
+transform = Transform3D(12, 0, 0, 0, 2, 0, 0, 0, 30, -0.028770447, 17.794582, -43.825493)
+material_override = SubResource("StandardMaterial3D_7v64f")
+use_collision = true
+size = Vector3(0.7235451, 0.15422896, 3.2830887)
+
+[node name="CSGCylinder3D" type="CSGCylinder3D" parent="ParedPiso" unique_id=404437691]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.063266754, 8.943489, 0)
+material_override = SubResource("StandardMaterial3D_mojbe")
+radius = 1.4550781
+height = 18.113907
+
+[node name="CSGCylinder3D2" type="CSGCylinder3D" parent="ParedPiso" unique_id=765847096]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.063266754, 8.943489, -7.866958)
+material_override = SubResource("StandardMaterial3D_mojbe")
+radius = 1.4550781
+height = 18.113907
+
+[node name="CSGCylinder3D3" type="CSGCylinder3D" parent="ParedPiso" unique_id=1240965340]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.063266754, 8.943489, -15.222114)
+material_override = SubResource("StandardMaterial3D_mojbe")
+radius = 1.4550781
+height = 18.113907
+
+[node name="CSGCylinder3D4" type="CSGCylinder3D" parent="ParedPiso" unique_id=550210903]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.063266754, 8.943489, -23.274626)
+material_override = SubResource("StandardMaterial3D_mojbe")
+radius = 1.4550781
+height = 18.113907
+
+[node name="CSGCylinder3D5" type="CSGCylinder3D" parent="ParedPiso" unique_id=96976487]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.063266754, 8.943489, -31.418112)
+material_override = SubResource("StandardMaterial3D_mojbe")
+radius = 1.4550781
+height = 18.113907
+
+[node name="CSGCylinder3D6" type="CSGCylinder3D" parent="ParedPiso" unique_id=2099279732]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.063266754, 8.943489, -39.78183)
+material_override = SubResource("StandardMaterial3D_mojbe")
+radius = 1.4550781
+height = 18.113907
+
+[node name="CSGCylinder3D7" type="CSGCylinder3D" parent="ParedPiso" unique_id=475012790]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.063266754, 8.943489, -47.98828)
+material_override = SubResource("StandardMaterial3D_mojbe")
+radius = 1.4550781
+height = 18.113907
+
+[node name="CSGCylinder3D8" type="CSGCylinder3D" parent="ParedPiso" unique_id=890239633]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.063266754, 8.943489, -55.950912)
+material_override = SubResource("StandardMaterial3D_mojbe")
+radius = 1.4550781
+height = 18.113907
+
+[node name="CSGCylinder3D9" type="CSGCylinder3D" parent="ParedPiso" unique_id=1692170222]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.063266754, 8.943489, -64.06649)
+material_override = SubResource("StandardMaterial3D_mojbe")
+radius = 1.4550781
+height = 18.113907
+
+[node name="CSGCylinder3D10" type="CSGCylinder3D" parent="ParedPiso" unique_id=904429967]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.063266754, 8.943489, -72.39186)
+material_override = SubResource("StandardMaterial3D_mojbe")
+radius = 1.4550781
+height = 18.113907
+
+[node name="CSGCylinder3D11" type="CSGCylinder3D" parent="ParedPiso" unique_id=1096976814]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.063266754, 8.943489, -80.58617)
+material_override = SubResource("StandardMaterial3D_mojbe")
+radius = 1.4550781
+height = 18.113907
+
+[node name="CSGCylinder3D12" type="CSGCylinder3D" parent="ParedPiso" unique_id=321478907]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.063266754, 8.943489, -88.939224)
+material_override = SubResource("StandardMaterial3D_mojbe")
+radius = 1.4550781
+height = 18.113907
+
+[node name="Agua" type="Node3D" parent="." unique_id=845446494]

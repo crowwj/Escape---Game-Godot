@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://ddvecey5dbxdj"]
+
+[ext_resource type="Script" uid="uid://djjxasqrlrmxn" path="res://player.gd" id="1_cpu6o"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_gnrci"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_6ygak"]
+
+[node name="Jugador" type="Node3D" unique_id=2129807334]
+
+[node name="Player" type="CharacterBody3D" parent="." unique_id=1652003255]
+script = ExtResource("1_cpu6o")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Player" unique_id=34648813]
+shape = SubResource("CapsuleShape3D_gnrci")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Player" unique_id=221711368]
+mesh = SubResource("CapsuleMesh_6ygak")
+
+[node name="Perspectiva" type="Node3D" parent="Player" unique_id=1593810235]
+
+[node name="Camera3D" type="Camera3D" parent="Player/Perspectiva" unique_id=467390177]
+transform = Transform3D(1, 0, 0, 0, 0.97600424, 0.21775146, 0, -0.21775146, 0.97600424, 0, 1.069751, 1.5809056)
+
+[node name="RayCastInteraccion" type="RayCast3D" parent="Player/Perspectiva/Camera3D" unique_id=1820868350]
+transform = Transform3D(1, 0, 0, 0, 0.9760042, -0.21775144, 0, 0.21775144, 0.9760042, 0, -0.04658264, -4.7039227)
+target_position = Vector3(0, 0, -3)

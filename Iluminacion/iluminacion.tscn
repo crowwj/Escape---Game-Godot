@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://dl7d1nkn4fiss"]
+
+[sub_resource type="Environment" id="Environment_3lmbj"]
+background_mode = 1
+ambient_light_source = 2
+ambient_light_energy = 0.0
+tonemap_mode = 2
+sdfgi_enabled = true
+volumetric_fog_enabled = true
+volumetric_fog_density = 0.02
+volumetric_fog_albedo = Color(0.16517478, 0.639508, 0.56953776, 1)
+
+[node name="Iluminacion" type="Node3D" unique_id=509156330]
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1398098622]
+light_energy = 0.0
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1986604524]
+environment = SubResource("Environment_3lmbj")
