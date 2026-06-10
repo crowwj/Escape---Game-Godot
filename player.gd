@@ -102,7 +102,7 @@ func _physics_process(delta: float) -> void:
 func _input(event):
 	# Si presionas la tecla 'E'
 	if Input.is_action_just_pressed("ui_accept"): # O puedes poner "interactuar" si ya creaste esa acción
-		if raycast.is_colliding():
+wd		if raycast.is_colliding():
 			var objeto = raycast.get_collider()
 			# Si el objeto tiene la función 'presionar', la ejecutamos
 			if objeto.has_method("presionar"):
