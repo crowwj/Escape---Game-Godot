@@ -1,0 +1,28 @@
+[gd_scene format=3 uid="uid://divpsj4mhi2rg"]
+
+[ext_resource type="Texture2D" uid="uid://48ik7xdikvqw" path="res://Texturas/Tiles132A_1K-JPG/Tiles132A.png" id="1_2qkg3"]
+[ext_resource type="Script" uid="uid://bvxt00l54ilma" path="res://barra.gd" id="1_u6kfo"]
+[ext_resource type="Texture2D" uid="uid://s63ngpv3subh" path="res://Texturas/Tiles107_1K-JPG/Tiles107_1K-JPG_Displacement.jpg" id="2_u6kfo"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_n1t4l"]
+albedo_color = Color(1, 0.2645259, 0.2850328, 1)
+metallic = 1.0
+metallic_specular = 1.0
+metallic_texture = ExtResource("1_2qkg3")
+roughness_texture = ExtResource("2_u6kfo")
+
+[sub_resource type="BoxMesh" id="BoxMesh_78upf"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_t5vmd"]
+
+[node name="Barra" type="Area3D" unique_id=1860604718]
+script = ExtResource("1_u6kfo")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1216900452]
+transform = Transform3D(0.5062704, 0, 0, 0, 7.2445345, 0, 0, 0, 0.54452693, 0, 0, 0)
+material_override = SubResource("StandardMaterial3D_n1t4l")
+mesh = SubResource("BoxMesh_78upf")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=85261460]
+transform = Transform3D(0.5062704, 0, 0, 0, 7.2445345, 0, 0, 0, 0.54452693, 0, 0, 0)
+shape = SubResource("BoxShape3D_t5vmd")

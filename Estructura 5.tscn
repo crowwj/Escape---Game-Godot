@@ -1,0 +1,317 @@
+[gd_scene format=3 uid="uid://v82xjtb5fppr"]
+
+[ext_resource type="Texture2D" uid="uid://d2rte65jspweu" path="res://Texturas/Rock061_1K-JPG/Rock061_1K-JPG_Color.jpg" id="1_jetm4"]
+[ext_resource type="Texture2D" uid="uid://roleslwwq3iv" path="res://Texturas/Rock061_1K-JPG/Rock061_1K-JPG_NormalDX.jpg" id="2_0u2qw"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_togxl"]
+albedo_texture = ExtResource("1_jetm4")
+normal_enabled = true
+normal_scale = 0.63
+normal_texture = ExtResource("2_0u2qw")
+
+[node name="Estructura5" type="Node3D" unique_id=969745250]
+
+[node name="CSGBox3D" type="CSGBox3D" parent="." unique_id=809379533]
+transform = Transform3D(50, 0, 0, 0, 1, 0, 0, 0, 1, 7.1364746, 24.889753, 3.6494904)
+material_override = SubResource("StandardMaterial3D_togxl")
+size = Vector3(2.7056885, 51.94162, 149.49893)
+
+[node name="CSGSphere3D" type="CSGSphere3D" parent="CSGBox3D" unique_id=1243480795]
+transform = Transform3D(0.39999995, 0, 0, 0, 20, 0, 0, 0, 20, -0.14272949, 0.2543049, 70.453804)
+operation = 2
+radius = 0.4042651
+
+[node name="CSGSphere3D59" type="CSGSphere3D" parent="CSGBox3D" unique_id=1692031798]
+transform = Transform3D(0.39999995, 0, 0, 0, 20, 0, 0, 0, 20, -0.14272949, 0.2543049, 63.203796)
+operation = 2
+radius = 0.4042651
+
+[node name="CSGSphere3D60" type="CSGSphere3D" parent="CSGBox3D" unique_id=316580150]
+transform = Transform3D(0.02, 0, 0, 0, 1, 0, 0, 0, 1, -0.14272949, -24.889753, -17.946232)
+operation = 2
+radius = 0.4042651
+
+[node name="CSGSphere3D2" type="CSGSphere3D" parent="CSGBox3D" unique_id=726778113]
+transform = Transform3D(0.39999995, 0, 0, 0, 20, 0, 0, 0, 20, -0.14272949, 0.2543049, 63.759666)
+operation = 2
+radius = 0.4042651
+
+[node name="CSGSphere3D3" type="CSGSphere3D" parent="CSGBox3D" unique_id=1953621577]
+transform = Transform3D(0.39999995, 0, 0, 0, 20, 0, 0, 0, 20, -0.14272949, 0.2543049, 54.8293)
+operation = 2
+radius = 0.4042651
+
+[node name="CSGSphere3D4" type="CSGSphere3D" parent="CSGBox3D" unique_id=1681727046]
+transform = Transform3D(0.39999995, 0, 0, 0, 20, 0, 0, 0, 20, -0.14272949, 0.2543049, 43.2287)
+operation = 2
+radius = 0.4042651
+
+[node name="CSGSphere3D5" type="CSGSphere3D" parent="CSGBox3D" unique_id=1168571523]
+transform = Transform3D(0.39999995, 0, 0, 0, 20, 0, 0, 0, 20, -0.14272949, 0.2543049, 30.60736)
+operation = 2
+radius = 0.4042651
+
+[node name="CSGSphere3D6" type="CSGSphere3D" parent="CSGBox3D" unique_id=857326152]
+transform = Transform3D(0.39999995, 0, 0, 0, 20, 0, 0, 0, 20, -0.14272949, 0.2543049, 17.932453)
+operation = 2
+radius = 0.4042651
+
+[node name="CSGSphere3D7" type="CSGSphere3D" parent="CSGBox3D" unique_id=1251545563]
+transform = Transform3D(0.39999995, 0, 0, 0, 20, 0, 0, 0, 20, -0.14272949, 0.2543049, 21.785576)
+operation = 2
+radius = 0.4042651
+
+[node name="CSGSphere3D8" type="CSGSphere3D" parent="CSGBox3D" unique_id=1937455392]
+transform = Transform3D(0.39999995, 0, 0, 0, 20, 0, 0, 0, 20, -0.060340464, 0.2543049, 21.785576)
+operation = 2
+radius = 0.42727444
+
+[node name="CSGSphere3D9" type="CSGSphere3D" parent="CSGBox3D" unique_id=807867450]
+transform = Transform3D(0.39999995, 0, 0, 0, 20, 0, 0, 0, 20, 0.092184335, 0.2543049, 21.785576)
+operation = 2
+radius = 0.42727444
+
+[node name="CSGSphere3D10" type="CSGSphere3D" parent="CSGBox3D" unique_id=466992113]
+transform = Transform3D(0.39999995, 0, 0, 0, 20, 0, 0, 0, 20, 0.25930172, 0.2543049, 21.785576)
+operation = 2
+radius = 0.42727444
+
+[node name="CSGSphere3D11" type="CSGSphere3D" parent="CSGBox3D" unique_id=769275317]
+transform = Transform3D(0.39999995, 0, 0, 0, 20, 0, 0, 0, 20, 0.37256238, 0.2543049, 21.785576)
+operation = 2
+radius = 0.42727444
+
+[node name="CSGSphere3D12" type="CSGSphere3D" parent="CSGBox3D" unique_id=602929660]
+transform = Transform3D(0.39999995, 0, 0, 0, 20, 0, 0, 0, 20, 0.54042876, 0.2543049, 21.785576)
+operation = 2
+radius = 0.42727444
+
+[node name="CSGSphere3D13" type="CSGSphere3D" parent="CSGBox3D" unique_id=404507996]
+transform = Transform3D(0.39999995, 0, 0, 0, 20, 0, 0, 0, 20, 0.54042876, 0.2543049, 31.392036)
+operation = 2
+radius = 0.42727444
+
+[node name="CSGSphere3D14" type="CSGSphere3D" parent="CSGBox3D" unique_id=1394880427]
+transform = Transform3D(0.39999995, 0, 0, 0, 20, 0, 0, 0, 20, 0.54042876, 0.2543049, 39.125366)
+operation = 2
+radius = 0.42727444
+
+[node name="CSGSphere3D15" type="CSGSphere3D" parent="CSGBox3D" unique_id=1412859758]
+transform = Transform3D(0.39999995, 0, 0, 0, 20, 0, 0, 0, 20, 0.54042876, 0.2543049, 46.02275)
+operation = 2
+radius = 0.42727444
+
+[node name="CSGSphere3D16" type="CSGSphere3D" parent="CSGBox3D" unique_id=1116614794]
+transform = Transform3D(0.39999995, 0, 0, 0, 20, 0, 0, 0, 20, 0.54042876, 0.2543049, 54.147224)
+operation = 2
+radius = 0.42727444
+
+[node name="CSGSphere3D17" type="CSGSphere3D" parent="CSGBox3D" unique_id=185535799]
+transform = Transform3D(0.39999995, 0, 0, 0, 20, 0, 0, 0, 20, 0.69439983, 0.2543049, 20.65699)
+operation = 2
+radius = 0.42727444
+
+[node name="CSGSphere3D18" type="CSGSphere3D" parent="CSGBox3D" unique_id=2011632634]
+transform = Transform3D(0.39999995, 0, 0, 0, 20, 0, 0, 0, 20, 0.8298272, 0.2543049, 20.65699)
+operation = 2
+radius = 0.42727444
+
+[node name="CSGSphere3D19" type="CSGSphere3D" parent="CSGBox3D" unique_id=1788720210]
+transform = Transform3D(0.39999995, 0, 0, 0, 20, 0, 0, 0, 20, 0.9541935, 0.2543049, 20.65699)
+operation = 2
+radius = 0.42727444
+
+[node name="CSGSphere3D20" type="CSGSphere3D" parent="CSGBox3D" unique_id=91532327]
+transform = Transform3D(0.39999995, 0, 0, 0, 20, 0, 0, 0, 20, 0.9541935, 0.2543049, 14.824936)
+operation = 2
+radius = 0.42727444
+
+[node name="CSGSphere3D21" type="CSGSphere3D" parent="CSGBox3D" unique_id=1811684843]
+transform = Transform3D(0.39999995, 0, 0, 0, 20, 0, 0, 0, 20, 0.9541935, 0.2543049, 9.084393)
+operation = 2
+radius = 0.42727444
+
+[node name="CSGSphere3D22" type="CSGSphere3D" parent="CSGBox3D" unique_id=410399256]
+transform = Transform3D(0.39999995, 0, 0, 0, 20, 0, 0, 0, 20, 0.9541935, 0.2543049, 1.0843925)
+operation = 2
+radius = 0.42727444
+
+[node name="CSGSphere3D23" type="CSGSphere3D" parent="CSGBox3D" unique_id=1099643716]
+transform = Transform3D(0.39999995, 0, 0, 0, 20, 0, 0, 0, 20, 0.9541935, 0.2543049, -3.5421057)
+operation = 2
+radius = 0.42727444
+
+[node name="CSGSphere3D24" type="CSGSphere3D" parent="CSGBox3D" unique_id=1183181139]
+transform = Transform3D(0.39999995, 0, 0, 0, 20, 0, 0, 0, 20, 0.9541935, 0.2543049, -8.327667)
+operation = 2
+radius = 0.42727444
+
+[node name="CSGSphere3D25" type="CSGSphere3D" parent="CSGBox3D" unique_id=783853729]
+transform = Transform3D(0.39999995, 0, 0, 0, 20, 0, 0, 0, 20, 0.9541935, 0.2543049, -16.973194)
+operation = 2
+radius = 0.42727444
+
+[node name="CSGSphere3D26" type="CSGSphere3D" parent="CSGBox3D" unique_id=1548307648]
+transform = Transform3D(0.39999995, 0, 0, 0, 20, 0, 0, 0, 20, 0.9541935, 0.2543049, -26.137215)
+operation = 2
+radius = 0.42727444
+
+[node name="CSGSphere3D27" type="CSGSphere3D" parent="CSGBox3D" unique_id=2053349699]
+transform = Transform3D(0.39999995, 0, 0, 0, 20, 0, 0, 0, 20, 0.9541935, 0.2543049, -35.041122)
+operation = 2
+radius = 0.42727444
+
+[node name="CSGSphere3D28" type="CSGSphere3D" parent="CSGBox3D" unique_id=1636465858]
+transform = Transform3D(0.39999995, 0, 0, 0, 20, 0, 0, 0, 20, 0.9541935, 0.2543049, -44.089485)
+operation = 2
+radius = 0.42727444
+
+[node name="CSGSphere3D29" type="CSGSphere3D" parent="CSGBox3D" unique_id=1192473572]
+transform = Transform3D(0.39999995, 0, 0, 0, 20, 0, 0, 0, 20, 0.9541935, 0.2543049, -52.60955)
+operation = 2
+radius = 0.42727444
+
+[node name="CSGSphere3D30" type="CSGSphere3D" parent="CSGBox3D" unique_id=1380618234]
+transform = Transform3D(0.39999995, 0, 0, 0, 20, 0, 0, 0, 20, 0.6872653, 0.2543049, -52.60955)
+operation = 2
+radius = 0.42727444
+
+[node name="CSGSphere3D31" type="CSGSphere3D" parent="CSGBox3D" unique_id=129611951]
+transform = Transform3D(0.39999995, 0, 0, 0, 20, 0, 0, 0, 20, 0.6148436, 0.2543049, -52.60955)
+operation = 2
+radius = 0.42727444
+
+[node name="CSGSphere3D32" type="CSGSphere3D" parent="CSGBox3D" unique_id=538411325]
+transform = Transform3D(0.39999995, 0, 0, 0, 20, 0, 0, 0, 20, 0.5447837, 0.2543049, -52.60955)
+operation = 2
+radius = 0.42727444
+
+[node name="CSGSphere3D33" type="CSGSphere3D" parent="CSGBox3D" unique_id=403093797]
+transform = Transform3D(0.39999995, 0, 0, 0, 20, 0, 0, 0, 20, 0.48478368, 0.2543049, -52.60955)
+operation = 2
+radius = 0.42727444
+
+[node name="CSGSphere3D34" type="CSGSphere3D" parent="CSGBox3D" unique_id=1897214297]
+transform = Transform3D(0.39999995, 0, 0, 0, 20, 0, 0, 0, 20, 0.79935944, 0.2543049, -52.60955)
+operation = 2
+radius = 0.42727444
+
+[node name="CSGSphere3D35" type="CSGSphere3D" parent="CSGBox3D" unique_id=1363015871]
+transform = Transform3D(0.39999995, 0, 0, 0, 20, 0, 0, 0, 20, 0.36834893, 0.2543049, -52.60955)
+operation = 2
+radius = 0.42727444
+
+[node name="CSGSphere3D36" type="CSGSphere3D" parent="CSGBox3D" unique_id=170645971]
+transform = Transform3D(0.39999995, 0, 0, 0, 20, 0, 0, 0, 20, 0.19305927, 0.2543049, -52.60955)
+operation = 2
+radius = 0.42727444
+
+[node name="CSGSphere3D37" type="CSGSphere3D" parent="CSGBox3D" unique_id=1941351039]
+transform = Transform3D(0.39999995, 0, 0, 0, 20, 0, 0, 0, 20, 0.11634001, 0.2543049, -52.60955)
+operation = 2
+radius = 0.42727444
+
+[node name="CSGSphere3D38" type="CSGSphere3D" parent="CSGBox3D" unique_id=210815678]
+transform = Transform3D(0.39999995, 0, 0, 0, 20, 0, 0, 0, 20, -0.05753439, 0.2543049, -52.60955)
+operation = 2
+radius = 0.42727444
+
+[node name="CSGSphere3D39" type="CSGSphere3D" parent="CSGBox3D" unique_id=2070511132]
+transform = Transform3D(0.39999995, 0, 0, 0, 20, 0, 0, 0, 20, -0.21108648, 0.2543049, -52.60955)
+operation = 2
+radius = 0.42727444
+
+[node name="CSGSphere3D40" type="CSGSphere3D" parent="CSGBox3D" unique_id=1578992438]
+transform = Transform3D(0.39999995, 0, 0, 0, 20, 0, 0, 0, 20, -0.3830763, 0.2543049, -52.60955)
+operation = 2
+radius = 0.42727444
+
+[node name="CSGSphere3D41" type="CSGSphere3D" parent="CSGBox3D" unique_id=591024909]
+transform = Transform3D(0.39999995, 0, 0, 0, 20, 0, 0, 0, 20, -0.360373, 0.2543049, -44.183926)
+operation = 2
+radius = 0.42727444
+
+[node name="CSGSphere3D42" type="CSGSphere3D" parent="CSGBox3D" unique_id=366441709]
+transform = Transform3D(0.39999995, 0, 0, 0, 20, 0, 0, 0, 20, -0.360373, 0.2543049, -33.51624)
+operation = 2
+radius = 0.42727444
+
+[node name="CSGSphere3D43" type="CSGSphere3D" parent="CSGBox3D" unique_id=1852560814]
+transform = Transform3D(0.39999995, 0, 0, 0, 20, 0, 0, 0, 20, -0.360373, 0.2543049, -24.923933)
+operation = 2
+radius = 0.42727444
+
+[node name="CSGSphere3D44" type="CSGSphere3D" parent="CSGBox3D" unique_id=1100399386]
+transform = Transform3D(0.39999995, 0, 0, 0, 20, 0, 0, 0, 20, -0.360373, 0.2543049, -17.923933)
+operation = 2
+radius = 0.42727444
+
+[node name="CSGSphere3D45" type="CSGSphere3D" parent="CSGBox3D" unique_id=493665909]
+transform = Transform3D(0.39999995, 0, 0, 0, 20, 0, 0, 0, 20, -0.360373, 0.2543049, -11.840352)
+operation = 2
+radius = 0.42727444
+
+[node name="CSGSphere3D46" type="CSGSphere3D" parent="CSGBox3D" unique_id=216480340]
+transform = Transform3D(0.39999995, 0, 0, 0, 20, 0, 0, 0, 20, -0.13445316, 0.2543049, -11.840352)
+operation = 2
+radius = 0.42727444
+
+[node name="CSGSphere3D47" type="CSGSphere3D" parent="CSGBox3D" unique_id=1513361133]
+transform = Transform3D(0.39999995, 0, 0, 0, 20, 0, 0, 0, 20, 0.050407737, 0.2543049, -11.840352)
+operation = 2
+radius = 0.42727444
+
+[node name="CSGSphere3D48" type="CSGSphere3D" parent="CSGBox3D" unique_id=1312378304]
+transform = Transform3D(0.39999995, 0, 0, 0, 20, 0, 0, 0, 20, 0.2104077, 0.2543049, -11.840352)
+operation = 2
+radius = 0.42727444
+
+[node name="CSGSphere3D49" type="CSGSphere3D" parent="CSGBox3D" unique_id=943192984]
+transform = Transform3D(0.39999995, 0, 0, 0, 20, 0, 0, 0, 20, 0.41241613, 0.2543049, -11.840352)
+operation = 2
+radius = 0.42727444
+
+[node name="CSGSphere3D50" type="CSGSphere3D" parent="CSGBox3D" unique_id=687662729]
+transform = Transform3D(0.39999995, 0, 0, 0, 20, 0, 0, 0, 20, 0.25874376, 0.2543049, -11.840352)
+operation = 2
+radius = 0.42727444
+
+[node name="CSGSphere3D51" type="CSGSphere3D" parent="CSGBox3D" unique_id=2097269852]
+transform = Transform3D(0.39999995, 0, 0, 0, 20, 0, 0, 0, 20, -0.19118002, 0.2543049, -11.840352)
+operation = 2
+radius = 0.42727444
+
+[node name="CSGSphere3D52" type="CSGSphere3D" parent="CSGBox3D" unique_id=721207498]
+transform = Transform3D(0.39999995, 0, 0, 0, 20, 0, 0, 0, 20, 0.35919037, 0.2543049, -23.042938)
+operation = 2
+radius = 0.42727444
+
+[node name="CSGSphere3D53" type="CSGSphere3D" parent="CSGBox3D" unique_id=1493081023]
+transform = Transform3D(0.39999995, 0, 0, 0, 20, 0, 0, 0, 20, 0.4372873, 0.2543049, -27.106682)
+operation = 2
+radius = 0.58593297
+
+[node name="CSGSphere3D56" type="CSGSphere3D" parent="CSGBox3D" unique_id=1194949156]
+transform = Transform3D(0.39999995, 0, 0, 0, 20, 0, 0, 0, 20, 0.1372098, 0.2543049, -27.106682)
+operation = 2
+radius = 0.58593297
+
+[node name="CSGSphere3D57" type="CSGSphere3D" parent="CSGBox3D" unique_id=179865246]
+transform = Transform3D(0.39999995, 0, 0, 0, 20, 0, 0, 0, 20, 0.20677394, 0.2543049, -27.106682)
+operation = 2
+radius = 0.58593297
+
+[node name="CSGSphere3D58" type="CSGSphere3D" parent="CSGBox3D" unique_id=1763293110]
+transform = Transform3D(0.39999995, 0, 0, 0, 20, 0, 0, 0, 20, -0.05322609, 0.2543049, -27.106682)
+operation = 2
+radius = 0.58593297
+
+[node name="CSGSphere3D54" type="CSGSphere3D" parent="CSGBox3D" unique_id=1171580841]
+transform = Transform3D(0.39999995, 0, 0, 0, 20, 0, 0, 0, 20, 0.12357345, 0.2543049, -31.983953)
+operation = 2
+radius = 0.42727444
+
+[node name="CSGSphere3D55" type="CSGSphere3D" parent="CSGBox3D" unique_id=1914154520]
+transform = Transform3D(0.39999995, 0, 0, 0, 20, 0, 0, 0, 20, 0.50437605, 0.2543049, -31.983953)
+operation = 2
+radius = 0.42727444

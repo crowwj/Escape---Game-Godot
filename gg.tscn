@@ -1,0 +1,29 @@
+[gd_scene format=3 uid="uid://o2p67y1unmbb"]
+
+[ext_resource type="Script" uid="uid://qldrm83sqmw" path="res://node_3d.gd" id="1_gj5va"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_kv4wm"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_oa3hd"]
+
+[node name="Node3D" type="CharacterBody3D" unique_id=1723230372]
+script = ExtResource("1_gj5va")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1881291666]
+mesh = SubResource("CapsuleMesh_kv4wm")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=819126925]
+shape = SubResource("CapsuleShape3D_oa3hd")
+
+[node name="CuerpoCamara" type="Node3D" parent="." unique_id=1016499472]
+
+[node name="Camera3D" type="Camera3D" parent="CuerpoCamara" unique_id=368285545]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.7099093, -0.49763298)
+
+[node name="InterfazVictoria" type="CanvasLayer" parent="." unique_id=1210935386]
+
+[node name="MensajeVictoria" type="Label3D" parent="InterfazVictoria" unique_id=1988355235]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.8, -3)
+visible = false
+modulate = Color(0, 0.7098256, 0.68163764, 1)
+text = "Felicidades! has pasado el juego!"

@@ -1,0 +1,127 @@
+[gd_scene format=3 uid="uid://xpv5tofj5cc8"]
+
+[ext_resource type="Script" uid="uid://b64ahcc15pt25" path="res://Modelos/Personajes/player_1.gd" id="1_jhxr2"]
+[ext_resource type="PackedScene" uid="uid://jl38pdjvqv0n" path="res://Modelos/Personajes/Noe/noegodot.glb" id="2_1e3jw"]
+[ext_resource type="Texture2D" uid="uid://ck1g4yc516l2i" path="res://Texturas/Tiles107_1K-JPG/Tiles107_1K-JPG_Color.jpg" id="3_w3vq1"]
+[ext_resource type="Texture2D" uid="uid://cedg0a7lbw5i7" path="res://Texturas/Tiles107_1K-JPG/Tiles107_1K-JPG_NormalDX.jpg" id="4_n42dl"]
+[ext_resource type="Texture2D" uid="uid://bxwrvpx0mv2tp" path="res://Texturas/Tiles107_1K-JPG/Tiles107_1K-JPG_NormalGL.jpg" id="5_ayj8w"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_18bdn"]
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_ty85a"]
+animation = &"Idle"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_w3vq1"]
+animation = &"run"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_n42dl"]
+animation = &"walk"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_ayj8w"]
+advance_mode = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_jn0nj"]
+advance_mode = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_q6xkv"]
+advance_mode = 2
+
+[sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_3dj52"]
+states/Idle/node = SubResource("AnimationNodeAnimation_ty85a")
+states/Idle/position = Vector2(317, 112)
+states/run/node = SubResource("AnimationNodeAnimation_w3vq1")
+states/run/position = Vector2(563, 115)
+states/walk/node = SubResource("AnimationNodeAnimation_n42dl")
+states/walk/position = Vector2(419, 108)
+transitions = ["Idle", "walk", SubResource("AnimationNodeStateMachineTransition_ayj8w"), "walk", "run", SubResource("AnimationNodeStateMachineTransition_jn0nj"), "Start", "Idle", SubResource("AnimationNodeStateMachineTransition_q6xkv")]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jn0nj"]
+albedo_texture = ExtResource("3_w3vq1")
+roughness_texture = ExtResource("5_ayj8w")
+normal_enabled = true
+normal_scale = 1.5
+normal_texture = ExtResource("4_n42dl")
+uv1_scale = Vector3(3, 3, 3)
+uv1_triplanar = true
+
+[node name="Node3D" type="CharacterBody3D" unique_id=1352296917]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.31028366, 0)
+script = ExtResource("1_jhxr2")
+
+[node name="noegodot" parent="." unique_id=1934054110 instance=ExtResource("2_1e3jw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.05689764, 0.69105697, 0.22362757)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="noegodot" unique_id=377072485]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.79302514, -0.05689764, 0.83458126, 0.04430282)
+shape = SubResource("CapsuleShape3D_18bdn")
+
+[node name="Skeleton3D" parent="noegodot/Armature" parent_id_path=PackedInt32Array(1934054110, 1703848945) index="0" unique_id=1626319558]
+bones/0/position = Vector3(0.0033598726, 0.8833335, 0.0032506837)
+bones/0/rotation = Quaternion(0.06449813, -0.050729584, -0.030685216, 0.9961551)
+bones/1/rotation = Quaternion(0.036524925, 0.42787218, 0.8999941, -0.074847534)
+bones/2/rotation = Quaternion(-0.9059337, -0.04147003, 0.050491247, 0.418348)
+bones/3/rotation = Quaternion(0.5068885, 0.0136107765, 0.0635063, 0.8595614)
+bones/4/rotation = Quaternion(0.2603757, -0.0058334284, 0.0052680755, 0.9654754)
+bones/5/rotation = Quaternion(-0.04308853, 0.011163178, 0.997655, -0.051994894)
+bones/6/rotation = Quaternion(-0.33189726, -0.060474444, -0.009236492, 0.9413298)
+bones/7/rotation = Quaternion(0.6510538, -0.109889776, -0.026989544, 0.7505497)
+bones/8/rotation = Quaternion(0.510694, 0.00022930537, -0.004153427, 0.85975254)
+bones/9/rotation = Quaternion(0.12528834, 0.12279648, 0.026150206, 0.9841444)
+bones/10/rotation = Quaternion(-0.09069485, 0.015379084, 0.011920075, 0.9956887)
+bones/11/rotation = Quaternion(-0.10408219, 0.014537762, 0.011980727, 0.9943903)
+bones/12/rotation = Quaternion(0.27836114, -0.02040496, -0.027651839, 0.95986146)
+bones/13/rotation = Quaternion(-0.28109485, -0.056424953, 0.014140987, 0.9579155)
+bones/14/rotation = Quaternion(0.59695846, 0.48277494, -0.44650915, 0.45956352)
+bones/15/rotation = Quaternion(0.42017165, 0.47196552, -0.34452042, 0.6942695)
+bones/16/rotation = Quaternion(0.0065092617, -0.004742927, 0.5988448, 0.8008246)
+bones/17/rotation = Quaternion(0.042570315, -0.049344208, -0.037279356, 0.9971776)
+bones/18/rotation = Quaternion(-0.0060518347, 0.0033945653, 0.011262531, 0.99991256)
+bones/19/rotation = Quaternion(0.13231699, -0.014868777, -7.054501e-05, 0.99109596)
+bones/20/rotation = Quaternion(0.026750064, -0.0005548085, -0.00023885194, 0.99964195)
+bones/21/rotation = Quaternion(0.018674165, -0.030071048, 0.010073798, 0.99932253)
+bones/22/rotation = Quaternion(0.09887469, 0.002142863, -0.014383981, 0.9949937)
+bones/23/rotation = Quaternion(0.034639, -0.003420642, -0.00055317755, 0.9993939)
+bones/24/rotation = Quaternion(0.040985484, -0.061435286, -0.030306354, 0.9968086)
+bones/25/rotation = Quaternion(0.099103704, -0.0068501867, 0.016752714, 0.99491256)
+bones/26/rotation = Quaternion(0.08235065, -0.0093014445, -0.015685983, 0.99643666)
+bones/27/rotation = Quaternion(0.025237158, -0.045939874, 0.006909228, 0.99860156)
+bones/28/rotation = Quaternion(0.10395168, 0.008235462, -0.017494572, 0.99439436)
+bones/29/rotation = Quaternion(0.081294365, 0.013085703, -0.0075908657, 0.99657536)
+bones/30/rotation = Quaternion(0.15259495, -0.065828644, 0.24083114, 0.95623314)
+bones/31/rotation = Quaternion(-0.00056546147, -0.023968147, -0.08587215, 0.9960177)
+bones/32/rotation = Quaternion(-0.052042034, 0.004843751, 0.0047031436, 0.9986221)
+bones/33/rotation = Quaternion(-0.5742369, 0.49662948, -0.46546972, -0.4549166)
+bones/34/rotation = Quaternion(0.43057457, -0.00032899543, -0.073017605, 0.8995965)
+bones/35/rotation = Quaternion(0.005629205, 0.0057700924, -0.7290552, 0.6844075)
+bones/36/rotation = Quaternion(-0.1612249, 0.09054597, -0.017396536, 0.9826013)
+bones/37/rotation = Quaternion(-0.030336058, -0.003125537, -0.0125000095, 0.99945676)
+bones/38/rotation = Quaternion(0.16994427, 0.014742994, 0.00052435213, 0.98534334)
+bones/39/rotation = Quaternion(0.014593471, 0.00062549626, -6.7756446e-08, 0.99989337)
+bones/40/rotation = Quaternion(-0.005476397, 0.030341715, -0.011232203, 0.9994615)
+bones/41/rotation = Quaternion(0.13638093, -0.0019085059, 0.017765127, 0.9904954)
+bones/42/rotation = Quaternion(0.022497483, 0.0035646898, -3.9335584e-05, 0.99974054)
+bones/43/rotation = Quaternion(0.019289073, 0.06323353, -0.006795301, 0.9977892)
+bones/44/rotation = Quaternion(0.13147774, 0.011237117, 0.023682998, 0.99097246)
+bones/45/rotation = Quaternion(0.015930166, 0.008215942, 0.0051638, 0.9998261)
+bones/46/rotation = Quaternion(0.0009553766, 0.046156716, -0.008244444, 0.99889976)
+bones/47/rotation = Quaternion(0.14145985, -0.007983819, 0.02195281, 0.9896684)
+bones/48/rotation = Quaternion(0.014329921, -0.01343336, 0.0012456067, 0.99980634)
+bones/49/rotation = Quaternion(0.090731226, 0.046421867, -0.17730896, 0.9788639)
+bones/50/rotation = Quaternion(-0.033831798, 0.008515419, 0.090139665, 0.99531794)
+bones/51/rotation = Quaternion(-0.06855096, -0.010574029, -0.023348296, 0.9973183)
+
+[node name="AnimationTree" type="AnimationTree" parent="." unique_id=1882929104]
+root_node = NodePath("../noegodot")
+tree_root = SubResource("AnimationNodeStateMachine_3dj52")
+anim_player = NodePath("../noegodot/AnimationPlayer")
+
+[node name="SueloBase16" type="CSGBox3D" parent="." unique_id=671666593]
+transform = Transform3D(12, 0, 0, 0, 2, 0, 0, 0, 30, -1.2889678, -0.14446065, -2.2206895)
+material_override = SubResource("StandardMaterial3D_jn0nj")
+use_collision = true
+size = Vector3(0.8235254, 0.15422896, 0.2993021)
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=156020592]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.8145967, 2.3840454)
+
+[editable path="noegodot"]
